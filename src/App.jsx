@@ -8,12 +8,12 @@ function App() {
     <div>
       <Title></Title>
       <div className="todo__wrapper">
-        <Todo></Todo>
-        <Todo></Todo>
-        <Todo></Todo>
+        <Todo title="Finish Frontend Simplified"></Todo>
+        <Todo title="Finish Interview Section"></Todo>
+        <Todo title="Landa $100k Job"></Todo>
       </div>
 
-      <Modal></Modal>
+      {/* <Modal></Modal> */}
     </div>
   );
 }
