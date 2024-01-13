@@ -16,7 +16,12 @@ function App() {
               paragraph="Apply to 100 Jobs"></Todo>
       </div>
 
-      {/* <Modal></Modal> */}
+      <Modal title="Areyou sure you want to delete?">
+
+      </Modal>
+      <Modal title="Are you sure you want to add?">
+              
+      </Modal>
     </div>
   );
 }
