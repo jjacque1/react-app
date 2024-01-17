@@ -5,12 +5,9 @@ import Modal from "./components/Modal.jsx";
 import React, { useState } from "react";
 
 function App() {
-  let isModalOpen = false;
-
-  function toggleModal() {
-    isModalOpen = !isModalOpen
-    console.log(isModalOpen)
-  }
+  
+  const [showModal, setShowModal] = useState(false);
+  
 
   return (
     <div>
@@ -22,7 +19,7 @@ function App() {
             console.log(event.target.value);
           }}
         />
-        <button>Add todo</button>
+        <button onClick={() => setShowModal(true)}>Add todo</button>
       </div>
       <div className="todo__wrapper">
         <Todo title="Finish Frontend Simplified"></Todo>
@@ -30,7 +27,7 @@ function App() {
         <Todo title="Land a $100k Job"></Todo>
       </div>
 
-      {isModalOpen ? <Modal title="Confirm delete?"></Modal>: null}
+      {showModal && <Modal title="Confirm delete?"></Modal> }
     </div>
   );
 }
