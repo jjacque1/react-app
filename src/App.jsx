@@ -2,7 +2,7 @@ import "./App.css";
 import Todo from "./components/Todo.jsx";
 import Title from "./components/Title.jsx";
 import Modal from "./components/Modal.jsx";
-import Counter from "./components/Counter.jsx"
+import Counter from "./components/Counter.jsx";
 import React, { useState } from "react";
 
 

@@ -1,7 +1,6 @@
 import "./Modal.css";
 
 function Modal({ title }) {
-
   return (
     <>
       <div className="modal">
@@ -13,7 +12,7 @@ function Modal({ title }) {
           >
             Cancel
           </button>
-          <button onClick={() => console.log("confirm")} className="btn">
+          <button onClick={() => console.log("confirm delete")} className="btn">
             Confirm
           </button>
         </div>

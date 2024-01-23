@@ -1,27 +1,40 @@
 import React, { useState } from "react";
 
-function Counter() {
-  const [counter, setCounter] = useState(0);
-  function incrementCounter() {
-    setCounter((prevCounter) => prevCounter + 1)
-    setCounter((prevCounter) => prevCounter + 1)
-  }
+// function Counter() {
+//   const [cart, setCart] = useState({
+//     item: "apple", 
+//     quantity: 0,
+//   });
+  
 
-  function decrementCounter() {
-    setCounter((prevCounter) => prevCounter - 1)
-    setCounter((prevCounter) => prevCounter - 1);
-  }
+//   function removeApple() {
+//     // 1. Use a callback to get the previoous value
+//     // 2. Spread out all the properties of he prev state
+//     // 3. Only change the property that you need to change 
+//     setCart((prevCart) => ({
+//       ...prevCart,
+//       quantity: prevCart.quantity - 1
+//     }))
+//   }
 
-  return (
-    <div>
-      <button onClick={decrementCounter}>-</button>
-      {counter}
-      <button onClick={incrementCounter}>+</button>
-    </div>
-  );
-}
+//   function addApple() {
+//     setCart((prevCart) => ({
+//       ...prevCart,
+//       quantity: prevCart.quantity + 1
+//     }))
+//   }
 
-export default Counter;
+//   return (
+//     <div>
+//       <button onClick={removeApple}>-</button>
+//       {cart.quantity} 
+//       {cart.item}
+//       <button onClick={addApple}>+</button>
+//     </div>
+//   );
+// }
+
+// export default Counter;
 
 
 
@@ -33,3 +46,33 @@ export default Counter;
 //  * 4. Create a button to decrement 'count' by 1
 //  * 5. Import your Counter in App.jsx and test it
 //  */
+
+
+
+function Counter() {
+// Create a + and 1 button
+// Create an empty arry that 
+// add a + to the empty array every time you click the plus button
+// add a - to the emptyh array every time you click the minus button
+
+const [arr, setArr] = useState([])
+
+function addPlus() {
+  setArr(prevArr => [...prevArr, "+"])
+}
+
+function addMinus() {
+  setArr(prevArr => [...prevArr, "-"])
+
+}
+
+  return (
+    <div>
+      <button onClick={addMinus}>-</button>
+      <button onClick={addPlus}>+</button>
+      {arr}
+    </div>
+  );
+}
+
+export default Counter;
