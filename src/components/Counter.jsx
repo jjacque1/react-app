@@ -63,7 +63,6 @@ function addPlus() {
 
 function addMinus() {
   setArr(prevArr => [...prevArr, "-"])
-
 }
 
   return (
