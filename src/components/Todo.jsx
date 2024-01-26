@@ -1,17 +1,17 @@
-import "./Todo.css";
+// import "./Todo.css";
 
-function Todo({ title }) {
-  function deleteTodo(id) {
-    console.log("deleteTodo()", title);
-  }
+// function Todo({ title }) {
+//   function deleteTodo(id) {
+//     console.log("deleteTodo()", title);
+//   }
 
-  return (
-    <div className="todo">
-      <p>{title}</p>
+//   return (
+//     <div className="todo">
+//       <p>{title}</p>
 
-      <button onClick={() => deleteTodo(1)}>Delete?</button>
-    </div>
-  );
-}
+//       <button onClick={() => deleteTodo(1)}>Delete?</button>
+//     </div>
+//   );
+// }
 
-export default Todo;
+// export default Todo;
