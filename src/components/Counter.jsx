@@ -1,4 +1,4 @@
-// import React, { useState } from "react";
+import React, { useState } from "react";
 
 // function Counter() {
 //   const [cart, setCart] = useState({
@@ -48,30 +48,30 @@
 //  */
 
 
-
-// function Counter() {
 // Create a + and 1 button
 // Create an empty arry that 
 // add a + to the empty array every time you click the plus button
 // add a - to the emptyh array every time you click the minus button
 
-// const [arr, setArr] = useState([])
+function Counter() {
 
-// function addPlus() {
-//   setArr(prevArr => [...prevArr, "+"])
-// }
+const [arr, setArr] = useState([])
 
-// function addMinus() {
-//   setArr(prevArr => [...prevArr, "-"])
-// }
+function addPlus() {
+  setArr(prevArr => [...prevArr, "+"])
+}
 
-//   return (
-//     <div>
-//       <button onClick={addMinus}>-</button>
-//       <button onClick={addPlus}>+</button>
-//       {arr}
-//     </div>
-//   );
-// }
+function addMinus() {
+  setArr(prevArr => [...prevArr, "-"])
+}
 
-// export default Counter;
+  return (
+    <div>
+      <button onClick={addMinus}>-</button>
+      <button onClick={addPlus}>+</button>
+      {arr}
+    </div>
+  );
+}
+
+export default Counter;
