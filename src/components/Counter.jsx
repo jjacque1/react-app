@@ -71,6 +71,7 @@ function addMinus() {
       <button onClick={addPlus}>+</button>
       {arr}
     </div>
+    
   );
 }
 
