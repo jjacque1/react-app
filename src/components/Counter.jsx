@@ -2,15 +2,14 @@ import React, { useState } from "react";
 
 // function Counter() {
 //   const [cart, setCart] = useState({
-//     item: "apple", 
+//     item: "apple",
 //     quantity: 0,
 //   });
-  
 
 //   function removeApple() {
 //     // 1. Use a callback to get the previoous value
 //     // 2. Spread out all the properties of he prev state
-//     // 3. Only change the property that you need to change 
+//     // 3. Only change the property that you need to change
 //     setCart((prevCart) => ({
 //       ...prevCart,
 //       quantity: prevCart.quantity - 1
@@ -27,7 +26,7 @@ import React, { useState } from "react";
 //   return (
 //     <div>
 //       <button onClick={removeApple}>-</button>
-//       {cart.quantity} 
+//       {cart.quantity}
 //       {cart.item}
 //       <button onClick={addApple}>+</button>
 //     </div>
@@ -35,9 +34,6 @@ import React, { useState } from "react";
 // }
 
 // export default Counter;
-
-
-
 
 // /**
 //  * 1. Create a "Counter.jsx" component
@@ -47,25 +43,21 @@ import React, { useState } from "react";
 //  * 5. Import your Counter in App.jsx and test it
 //  */
 
-
 // Create a + and 1 button
-// Create an empty arry that 
+// Create an empty arry that
 // add a + to the empty array every time you click the plus button
 // add a - to the emptyh array every time you click the minus button
 
 function Counter() {
+  const [arr, setArr] = useState([]);
 
-const [arr, setArr] = useState([])
+  function addPlus() {
+    setArr((prevArr) => [...prevArr, "+"]);
+  }
 
-function addPlus() {
-
-  setArr(prevArr => [...prevArr, "+"])
-  
-}
-
-function addMinus() {
-  setArr(prevArr => [...prevArr, "-"])
-}
+  function addMinus() {
+    setArr((prevArr) => [...prevArr, "-"]);
+  }
 
   return (
     <div>
@@ -73,7 +65,6 @@ function addMinus() {
       <button onClick={addPlus}>+</button>
       {arr}
     </div>
-    
   );
 }
 
