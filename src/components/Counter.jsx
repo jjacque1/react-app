@@ -58,7 +58,9 @@ function Counter() {
 const [arr, setArr] = useState([])
 
 function addPlus() {
+
   setArr(prevArr => [...prevArr, "+"])
+  
 }
 
 function addMinus() {

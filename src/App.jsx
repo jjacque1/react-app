@@ -45,11 +45,13 @@ function App() {
       </div>
 
       {showModal && (
+        
         <Modal
           cancleModal={cancleModal}
           confirmModal={confirmModal}
           title="Confirm delete?"
         ></Modal>
+
       )}
     </div>
   );

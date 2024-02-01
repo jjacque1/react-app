@@ -6,6 +6,7 @@ function Todo({ title, onTodoDelete }) {
       <p>{title}</p>
 
       <button onClick={onTodoDelete}>Delete?</button>
+      
     </div>
   );
 }
