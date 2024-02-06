@@ -1,9 +1,10 @@
 import "./App.css";
-import Todo from "./components/Todo.jsx";
-import Title from "./components/Title.jsx";
-import Modal from "./components/Modal.jsx";
-// import Counter from "./components/Counter.jsx";
-import React, { useState, useEffect } from "react";
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+// import Todo from "./components/Todo.jsx";
+// import Title from "./components/Title.jsx";
+// import Modal from "./components/Modal.jsx";
+// // import Counter from "./components/Counter.jsx";
+// import React, { useState, useEffect } from "react";
 
 // function App() {
 //   const [showModal, setShowModal] = useState(false);
@@ -69,7 +70,13 @@ import React, { useState, useEffect } from "react";
 
 function App() {
   return (
-    <div></div>
+    <div>
+      <Router>
+        <Routes>
+         <Route path="/" element={<Home/>}></Route>
+        </Routes>
+      </Router>
+    </div>
   )
 }
 
