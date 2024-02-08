@@ -1,31 +1,37 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import User from "../components/User.jsx"
 function Home() {
-    const[users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
 
   async function fetchUsers() {
     const { data } = await axios.get(
-        "https://jsonplaceholder.typicode.com/users"
-        );
+      "https://jsonplaceholder.typicode.com/users"
+    );
     setUsers(data);
-    console.log(data)
+    console.log(data);
   }
 
   useEffect(() => {
     setTimeout(() => {
-        fetchUsers();
+      fetchUsers();
     }, 500);
     fetchUsers();
   }, []);
 
+  const pixels = "3px";
+
   return (
     <div>
-        {users.length > 0
-        ? <h1>{users[0]?.name}</h1>
-        : <h1>Loading...</h1>
-        }
-
+      {users.map((user) => (
+        <User 
+        key={user.id}
+        id={user.id}
+        name={user.name}
+        email={user.email}
+        username={user.username}
+        />
+      ))}
     </div>
   );
 }
