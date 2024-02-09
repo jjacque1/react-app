@@ -9,10 +9,9 @@ import Users from "./pages/Users.jsx";
 function App() {
   return (
     <Router>
-      <Nav></Nav>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/users/:username" element = {<Users/>}></Route>
+        <Route path="users/:id" element = {<Users/>}></Route>
       </Routes>
     </Router>
   );
